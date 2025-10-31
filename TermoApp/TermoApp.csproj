@@ -1,0 +1,66 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="efeitos_sonoros\clickjogo.wav" />
+    <None Remove="efeitos_sonoros\deletejogo.wav" />
+    <None Remove="efeitos_sonoros\enter_invalido.wav" />
+    <None Remove="efeitos_sonoros\enter_valido.wav" />
+    <None Remove="efeitos_sonoros\estatisticajogo.wav" />
+    <None Remove="efeitos_sonoros\ganharjogo.wav" />
+    <None Remove="efeitos_sonoros\perderjogo.wav" />
+    <None Remove="efeitos_sonoros\reiniciarjogo.wav" />
+    <None Remove="imagens\background_jogo.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="efeitos_sonoros\clickjogo.wav" />
+    <EmbeddedResource Include="efeitos_sonoros\deletejogo.wav" />
+    <EmbeddedResource Include="efeitos_sonoros\enter_invalido.wav" />
+    <EmbeddedResource Include="efeitos_sonoros\enter_valido.wav" />
+    <EmbeddedResource Include="efeitos_sonoros\estatisticajogo.wav" />
+    <EmbeddedResource Include="efeitos_sonoros\ganharjogo.wav" />
+    <EmbeddedResource Include="efeitos_sonoros\perderjogo.wav" />
+    <EmbeddedResource Include="efeitos_sonoros\reiniciarjogo.wav" />
+    <EmbeddedResource Include="imagens\background_jogo.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TermoLib\TermoLib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
